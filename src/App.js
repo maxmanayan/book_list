@@ -24,19 +24,15 @@ function App() {
   useEffect(() => {getLib()},[])
 
   const addBook = (book) => {
-    console.log(book)
-    let id = Math.random()
+    let id = Math.floor(9700000000000 + (Math.random() * 100000000000));
     let bookID = {...book, isbn: id}
     setBooks([bookID, ...books])
-    // return <Book {...book} title={book.title} author={book.author}/>
   }
 
 
   const deleteBook = (isbn) => {
-    console.log(books)
     let filterBooks = books.filter(book => book.isbn !== isbn)
     setBooks(filterBooks)
-    console.log(filterBooks)
   }
 
   return (
