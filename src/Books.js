@@ -15,7 +15,6 @@ const Books = (props) => {
     <div>
       <h1>All Books Here</h1>
       {renderBooks()}
-      {/* <Book /> */}
     </div>
   )
 }
